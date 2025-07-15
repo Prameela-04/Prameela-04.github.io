@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Internship Portal</title>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <div class="music-player-container">
+        <div class="music-player">
+            <div class="album-art">
+                <img src="https://via.placeholder.com/300" alt="Album Art" id="album-art">
+            </div>
+            <div class="song-info">
+                <h2 id="song-title">Song Title</h2>
+                <p id="artist">Artist Name</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            <div class="controls">
+                <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                <button id="play-btn"><i class="fas fa-play"></i></button>
+                <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+            </div>
+            <div class="volume-control">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0.7">
+                <i class="fas fa-volume-up"></i>
+            </div>
+            <div class="playlist">
+                <h3>Playlist</h3>
+                <ul id="playlist"></ul>
+            </div>
+        </div>
+    </div>
 
-  <!-- Sticky Banner -->
-  <div class="sticky-banner">
-    🚀 Apply for Internship
-  </div>
+    <audio id="audio"></audio>
 
-  <!-- Hamburger Menu -->
-  <button class="hamburger" aria-label="Open menu">☰</button>
-
-
-  <!-- Sidebar Navigation -->
-  <nav id="sidebar" class="sidebar">
-    <ul>
-      <li><button class="nav-link" data-target="application">Internship Application</button></li>
-      <li><button class="nav-link" data-target="offer">Offer Letter</button></li>
-      <li><button class="nav-link" data-target="certificate">Certificate Verification</button></li>
-      <li><button class="nav-link" data-target="join">Join Team</button></li>
-      <li><button class="nav-link" data-target="contact">Contact</button></li>
-    </ul>
-  </nav>
-  <main class="main-content">
-  <!-- Home screen with initial message -->
-  <section id="home" class="content-section active">
-    🏠 <h2>Welcome</h2>
-    <p>Click the ☰ menu at the top right to see the internship applications.</p>
-  </section>
-
-  <!-- Main Content Sections -->
-  <main class="main-content">
-    <section id="application" class="content-section">📄 <h2>Internship Application</h2><p>Application form details...</p></section>
-    <section id="offer" class="content-section">📄 <h2>Offer Letter</h2><p>Offer letter information...</p></section>
-    <section id="certificate" class="content-section">📄 <h2>Certificate Verification</h2><p>Verify certificates here...</p></section>
-    <section id="join" class="content-section">📄 <h2>Join Team</h2><p>Form to join the team...</p></section>
-    <section id="contact" class="content-section">📄 <h2>Contact</h2><p>Contact us details...</p></section>
-  </main>
-
-  <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
